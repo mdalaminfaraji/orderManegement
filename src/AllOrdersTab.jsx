@@ -1,12 +1,30 @@
 import React, { useEffect, useState } from 'react';
 import './OrdersTab.css'
 const AllOrdersTab = () => {
-const [Orders, setOrder]=useState([]);
-useEffect(()=>{
-    fetch('../public/FateData.json')
-    .then(res=>res.json())
-    .then(data=>setOrder(data));
-}, [])
+
+const Orders=[
+    { "id": 1, "name": "John Doe", "deliveryType": "Regular" },
+    { "id": 2, "name": "Jane Smith", "deliveryType": "Express" },
+    { "id": 3, "name": "Alice Johnson", "deliveryType": "Regular" },
+    { "id": 4, "name": "Robert Davis", "deliveryType": "Express" },
+    { "id": 5, "name": "Emily Wilson", "deliveryType": "Regular" },
+    { "id": 6, "name": "Michael Brown", "deliveryType": "Express" },
+    { "id": 7, "name": "Olivia Taylor", "deliveryType": "Regular" },
+    { "id": 8, "name": "Daniel Anderson", "deliveryType": "Express" },
+    { "id": 9, "name": "Sophia Thompson", "deliveryType": "Regular" },
+    { "id": 10, "name": "Matthew Davis", "deliveryType": "Express" },
+    { "id": 11, "name": "Emma Wilson", "deliveryType": "Regular" },
+    { "id": 12, "name": "David Clark", "deliveryType": "Express" },
+    { "id": 13, "name": "Ava Johnson", "deliveryType": "Regular" },
+    { "id": 14, "name": "Joseph White", "deliveryType": "Express" },
+    { "id": 15, "name": "Oliver Thomas", "deliveryType": "Regular" },
+    { "id": 16, "name": "Mia Rodriguez", "deliveryType": "Express" },
+    { "id": 17, "name": "William Garcia", "deliveryType": "Regular" },
+    { "id": 18, "name": "Sofia Hernandez", "deliveryType": "Express" },
+    { "id": 19, "name": "James Smith", "deliveryType": "Regular" },
+    { "id": 20, "name": "Isabella Martinez", "deliveryType": "Express" }
+  ]
+  
 
   const ordersPerPage = 5; // Number of orders to display per page
   const [currentPage, setCurrentPage] = useState(1);
